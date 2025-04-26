@@ -1,0 +1,452 @@
+
+1) What are the types of Applications? 
+
+ Desktop Applications , Web Applications , Mobile Applications , Machine Learning & AI ,
+ Data Science & Data Analysis , Game Development ,  Scripting and Automation , Cloud & DevOps Tools 
+
+2) What is programing? 
+
+   Programming in Python means writing instructions using the Python programming language to tell a computer what to do.
+    Python is one of the most popular and beginner-friendly languages out there. It’s used for everything from:
+
+> Web development (using frameworks like Django or Flask)
+> Data science & machine learning (with libraries like pandas, NumPy, scikit-learn, TensorFlow)
+> Automation/scripting (like writing scripts to rename files or scrape websites)
+> App development, game development, and more.
+
+3) What is Python?
+
+ Python is a high-level, general-purpose programming language known for its readability and simplicity
+
+4) Write a Python program to check if a number is positive, negative or
+zero. 
+
+  n = float(input("Enter a number: "))
+
+  if n > 0:
+      print("The number is positive.")
+  elif n < 0:
+      print("The number is negative.")
+  else:
+      print("The number is zero.")
+
+ Enter a number:  5
+ The number is positive.
+
+
+5)Write a Python program to get the Factorial number of given numbers. 
+
+ num = int(input("Enter a number: "))
+
+if num < 0:
+    print("Sorry, factorial does not exist for negative numbers.")
+elif num == 0:
+    print("The factorial of 0 is 1.")
+else:
+    factorial = 1
+    for i in range(1, num + 1):
+        factorial *= i
+    print(f"The factorial of {num} is {factorial}.")
+
+
+ Enter a number:  9
+The factorial of 9 is 362880.
+
+
+6)Write a Python program to get the Fibonacci series of given range. 
+
+
+ n= int(input("Enter the number of terms: "))
+
+
+a, b = 0, 1
+
+
+if n <= 0:
+    print("Please enter a positive integer.")
+elif n == 1:
+    print("Fibonacci sequence up to 1 term:")
+    print(a)
+else:
+    print(f"Fibonacci sequence up to {n_terms} terms:")
+    for _ in range(n_terms):
+        print(a, end=" ")
+        a, b = b, a + b
+
+
+ Enter the number of terms:  1
+ Fibonacci sequence up to 1 term:
+ 0
+
+7)How memory is managed in Python? 
+
+ Python uses a private heap space to manage memory, employing reference counting and garbage collection for automatic memory management
+
+8)What is the purpose continuing statement in python? 
+
+ The continue statement in Python serves to skip the rest of the code within the current loop iteration and proceed to the next iteration. 
+It is used inside loops, such as for and while loops, to bypass specific iterations based on a condition. When the continue statement is encountered,
+the remaining code in the current iteration is skipped, and the loop moves on to the next item or condition.
+
+9) Write python program that swap two number with temp variable
+and without temp variable. 
+
+
+a = int(input("Enter first number (a): "))
+ b = int(input("Enter second number (b): "))
+
+print(f"Before swapping: a = {a}, b = {b}")
+
+temp = a
+a = b
+b = temp
+
+print(f"After swapping with temp variable: a = {a}, b = {b}") 
+
+
+Enter first number (a):  77
+Enter second number (b):  99
+Before swapping: a = 77, b = 99
+After swapping with temp variable: a = 99, b = 77
+
+10) Write a Python program to find whether a given number is even
+or odd, print out an appropriate message to the user.
+
+num = int(input("Enter a number: "))
+
+
+if num % 2 == 0:
+    print(f"The number {num} is even.")
+else:
+    print(f"The number {num} is odd.")
+
+Enter a number:  7
+The number 7 is odd.
+
+11) Write a Python program to test whether a passed letter is a vowel
+or not.
+
+ a=(input("Enter the aeiou:"))
+if a  in ["a","e","i","o","u"]:
+
+    print("This is vowel")
+
+else:
+    print("This is not")
+
+Enter the aeiou: h
+This is not
+
+
+12) Write a Python program to sum of three given integers. However, if
+two values are equal sum will be zero. 
+
+a = int(input("Enter the first integer: "))
+b = int(input("Enter the second integer: "))
+c = int(input("Enter the third integer: "))
+
+
+if a == b or b == c or a == c:
+    print("The sum is 0 because two values are equal.")
+else:
+  
+    total_sum = a + b + c
+    print(f"The sum of the three numbers is: {total_sum}")
+
+
+Enter the first integer:  7
+Enter the second integer:  7
+Enter the third integer:  7
+The sum is 0 because two values are equal.
+
+13) Write a Python program that will return true if the two given
+integer values are equal or their sum or difference is 5. 
+
+a = int(input("Enter the first integer: "))
+b = int(input("Enter the second integer: "))
+
+
+if a == b or (a + b == 5) or (abs(a - b) == 5):
+    print("True")
+else:
+    print("False")
+
+Enter the first integer:  3
+Enter the second integer:  2
+True
+
+
+14)Write a python program to sum of the first n positive integers. 
+
+ def sum_of_n_integers(n):
+
+
+    return n * (n + 1) // 2
+
+
+try:
+    n = int(input("Enter a positive integer: "))
+    if n > 0:
+        result = sum_of_n_integers(n)
+        print(f"The sum of the first {n} positive integers is {result}")
+    else:
+        print("Please enter a number greater than 0.")
+except ValueError:
+    print("Invalid input. Please enter a valid integer.")
+
+Enter a positive integer:  5
+The sum of the first 5 positive integers is 15
+
+15)Write a Python program to calculate the length of a string. 
+
+
+def calculate_length(s):
+    return len(s)
+
+
+user_input = input("Enter a string: ")
+length = calculate_length(user_input)
+
+print(f"The length of the string is: {length}")
+
+Enter a string:  shubham, singh
+The length of the string is: 14
+
+16) Write a Python program to count the number of characters
+(character frequency) in a string 
+
+def character_frequency(s):
+    freq = {}
+    for char in s:
+        if char in freq:
+            freq[char] += 1
+        else:
+            freq[char] = 1
+    return freq
+
+
+user_input = input("Enter a string: ")
+frequency = character_frequency(user_input)
+
+print("Character frequencies:")
+for char, count in frequency.items():
+    print(f"'{char}': {count}")
+
+Enter a string:  shubham , singh
+Character frequencies:
+'s': 2
+'h': 3
+'u': 1
+'b': 1
+'a': 1
+'m': 1
+' ': 2
+',': 1
+'i': 1
+'n': 1
+'g': 1
+
+
+17)What are negative indexes and why are they used?
+
+-1 = last element
+
+-2 = second last element
+
+-3 = third last element
+
+Negative indexes are used because they make it easy to access elements from the end without knowing the length of the sequence.
+
+18)Write a Python program to count occurrences of a substring in a string. 
+
+def count_substring(main_string, sub_string):
+    return main_string.count(sub_string)
+
+
+main_string = input("Enter the main string: ")
+sub_string = input("Enter the substring to count: ")
+
+count = count_substring(main_string, sub_string)
+
+print(f"The substring '{sub_string}' appears {count} time(s) in the string.")
+
+
+Enter the main string:  shubham, singh
+Enter the substring to count:  singh
+The substring 'singh' appears 1 time(s) in the string.
+
+19) Write a Python program to count the occurrences of each word in a given sentence 
+
+ sentence = input("Enter a sentence: ")
+
+words = sentence.lower().split()  # convert to lowercase & split into words
+
+word_count = {}
+
+for word in words:
+    word_count[word] = word_count.get(word, 0) + 1
+
+for word, count in word_count.items():
+    print(f"{word}: {count}")
+
+Enter a sentence:  i love cricket
+i: 1
+love: 1
+cricket: 1  
+
+20) Write a Python program to get a single string from two given strings,
+separated by a space and swap the first two characters of each string. 
+
+def swap_and_combine(str1, str2):
+    
+    if len(str1) < 2 or len(str2) < 2:
+        return "Both strings should have at least two characters."
+
+    
+    new_str1 = str2[:2] + str1[2:]
+    new_str2 = str1[:2] + str2[2:]
+
+    
+    combined = new_str1 + " " + new_str2
+    return combined
+
+
+string1 = input("Enter the first string: ")
+string2 = input("Enter the second string: ")
+result = swap_and_combine(string1, string2)
+print("Result:", result)
+
+Enter the first string:  hello
+Enter the second string:  word
+Result: wollo herd
+
+21) Write a Python program to add 'in' at the end of a given string (length
+should be at least 3). If the given string already ends with 'ing' then
+add 'ly' instead if the string length of the given string is less than 3,
+leave it unchanged. 
+
+def add_suffix(word):
+    if len(word) < 3:
+        return word
+    elif word.endswith('ingh'):
+        return word + 'ly'
+    else:
+        return word + 'ingh'
+
+
+user_input = input("Enter a word: ")
+result = add_suffix(user_input)
+print("Result:", result)
+
+Enter a word:  shubhams
+Result: shubhamsingh
+
+22) Write a Python function to reverses a string if its length is a multiple
+of 4. 
+
+def reverse_if_multiple_of_four(s):
+    
+    if len(s) % 4 == 0:
+        return s[::-1]  
+    else:
+        return s  
+
+
+user_input = input("Enter a string: ")
+result = reverse_if_multiple_of_four(user_input)
+print("Result:", result)
+
+Enter a string:  77766559990000444444
+Result: 44444400009995566777
+
+23) Write a Python program to get a string made of the first 2 and the last
+2 chars from a given a string. If the string length is less than 2, return
+instead of the empty string.
+
+def first_last_two_chars(s):
+    if len(s) < 2:
+        return ''
+    return s[:2] + s[-2:]
+
+
+input_str = input("Enter a string: ")
+result = first_last_two_chars(input_str)
+print("Result:", result)
+
+
+Enter a string:  shubham
+Result: sham
+
+24)Write a Python function to insert a string in the middle of a string.
+
+def insert_in_middle(original, insert):
+    mid_index = len(original) // 2
+    return original[:mid_index] + insert + original[mid_index:]
+
+
+original_str = input("Enter the original string: ")
+insert_str = input("Enter the string to insert: ")
+
+result = insert_in_middle(original_str, insert_str)
+print("Result:", result)
+
+Enter the original string:  shubham
+Enter the string to insert:  aayush
+Result: shuaayushbham
+
+25)What is List? How will you reverse a list? 
+
+fruits = ["apple", "banana", "cherry"]
+
+fruits.reverse()
+
+print(fruits)
+
+['cherry', 'banana', 'apple']
+
+26)How will you remove last object from a list?
+Same list
+
+fruits.pop()
+'apple'
+
+27)Suppose list1 is [2, 33, 222, 14, and 25], what is list1 [-1]?
+
+list1 = [2, 33, 222, 14, 25]
+list1[-1]
+25
+
+28)Differentiate between append () and extend () methods? 
+
+list1 = [1, 2, 3]
+list1.append([4, 5])
+print(list1)
+
+
+30)How will you compare two lists? 
+
+list1 = [1, 2, 3]
+list2 = [1, 2, 3]
+list3 = [3, 2, 1]
+list4 = [1, 2, 3, 4]
+
+print(list1 == list2)  
+print(list1 == list3)  
+print(list1 == list4)  
+
+True
+False
+False 
+
+
+
+31) Write a Python program to count the number of strings where the string
+length is 2 or more and the first and last character are same from a given list
+of strings. 
+
+
+
+
+
+
+
